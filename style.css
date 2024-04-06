@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
+
+.container {
+    box-sizing: border-box;
+    width: 680px;
+    margin: 20px auto 0;
+    font-family: "Inter Tight", sans-serif;
+}
+
+.title {
+    text-shadow: 2px -1px 3px grey;
+}
+
+.block-items {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.item {
+    padding: 20px 10px;
+    border: 1px solid grey;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: stretch;
+    box-shadow: 7px -5px 5px grey;
+}
+
+.item-description {
+    display: flex;
+    flex-basis: 80%;
+    gap: 20px;
+}
+
+.item-details {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 70%;
+    gap: 15px;
+}
+
+.img {
+    flex-basis: 30%;
+    max-width: 150px;
+}
+
+.item-price {
+    flex-basis: 20%;
+    align-self: center;
+    text-align: center;
+    font-weight: 700;
+    display: flex;
+    gap: 5px;
+}
+
+
+.name {
+    font-weight: 700;
+    padding: 0;
+    margin: 0;
+}
+
+.total {
+    margin: 20px 0;
+    padding-right: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn {
+    width: 200px;
+    height: 50px;
+    cursor: pointer;
+    border: 1px solid grey;
+    box-shadow: 7px -5px 5px grey; 
+    font-family: "Inter Tight", sans-serif;  
+    font-weight: 700;
+    background-color: rgba(128, 128, 128, 0.11);
+}
+
+.btn:hover {
+background-color: rgb(199, 197, 197);
+}
+
+.sum__title, .total-sum__num, .total-sum__rub {
+    padding: 0;
+    margin: 0;
+    font-weight: 700;
+}
+
+.sum__title {
+    margin-bottom: 10px;
+}
+
+.total-sum {
+display: flex;
+gap: 5px;
+}
+
+select {
+    cursor: pointer;
+    font-family: "Inter Tight", sans-serif; 
+}

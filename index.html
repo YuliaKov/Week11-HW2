@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Корзина</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Корзина</h1>
+        <div class="block-items">
+            <div class="item">
+                <div class="item-description">
+                    <img class="img" id="imgJacket" src="" alt="jacket">
+                    <div class="item-details">
+                        <p class="name">Куртка-косуха из экокожи</p>
+                        <div class="select-color">
+                        <label for="jacketColor">Цвет: </label>
+                        <select name="color" id="jacketColor" onchange="chooseJacketColor()">
+                            <option value="nothing" selected>Не выбрано</option>
+                            <option value="black">Черный</option>
+                            <option value="beige">Бежевый</option>
+                        </select>
+                    </div>
+                    <div class="select-size">
+                        <label for="jacketSize">Размер: </label>
+                        <select name="size" id="jacketSize">
+                            <option value="nothing" selected>Не выбрано</option>
+                            <option value="S">S</option>
+                            <option value="M">M</option>
+                            <option value="L">L</option>
+                        </select>
+                    </div>
+                    <div class="select-qty">
+                        <label for="jacketQty">Количество: </label>
+                        <select name="quantity" id="jacketQty" onchange="chooseJacketQty(), countTotalSum()">
+                            <option value="0" selected>0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                    </div>
+                    </div>
+                </div>
+                <div class="item-price">
+                    <div class="item-price__num" id="jacketPrice"></div>
+                    <div class="item-price__rub">руб.</div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-description">
+                    <img class="img" id="imgSneakers" src="" alt="sneakers">
+                    <div class="item-details">
+                    <p class="name">Женские кроссовки STREETBEAT Rash</p>
+                    <div class="select-color">
+                    <label for="sneakersColor">Цвет: </label>
+                    <select name="color" id="SneakersColor" onchange="chooseSneakersColor()">
+                        <option value="nothing" selected>Не выбрано</option>
+                        <option value="grey">Серый</option>
+                        <option value="beige">Бежевый</option>
+                        <option value="green">Зеленый</option>
+                    </select>
+                </div>
+                <div class="select-size">
+                    <label for="sneakersSize">Размер: </label>
+                    <select name="size" id="sneakersSize">
+                        <option value="nothing" selected>Не выбрано</option>
+                        <option value="38">38</option>
+                        <option value="39">39</option>
+                        <option value="40">40</option>
+                        <option value="41">41</option>
+                    </select>
+                </div>
+                <div class="select-qty">
+                    <label for="sneakersQty">Количество: </label>
+                    <select name="quantity" id="sneakersQty" onchange="chooseSneakersQty(), countTotalSum()">
+                        <option value="0" selected>0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                </div>
+                </div>
+                </div>
+                <div class="item-price">
+                    <div class="item-price__num" id="sneakersPrice"></div>
+                    <div class="item-price__rub">руб.</div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-description">
+                    <img class="img" id="imgJeans" src="" alt="jeans">
+                    <div class="item-details">
+                    <p class="name">Женские джинсы MAISON DAVID</p>
+                    <div class="select-color">
+                    <label for="jeansColor">Цвет: </label>
+                    <select name="color" id="jeansColor" onchange="chooseJeansColor()">
+                        <option value="nothing" selected>Не выбрано</option>
+                        <option value="black">Черный</option>
+                        <option value="white">Белый</option>
+                        <option value="blue">Синий</option>
+                    </select>
+                </div>
+                <div class="select-size">
+                    <label for="jeansSize">Размер: </label>
+                    <select name="size" id="jeansSize">
+                        <option value="nothing" selected>Не выбрано</option>
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                    </select>
+                </div>
+                <div class="select-qty">
+                    <label for="jeansQty">Количество: </label>
+                    <select name="quantity" id="jeansQty" onchange="chooseJeansQty(), countTotalSum()">
+                        <option value="0" selected>0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                </div>
+                </div>
+                </div>
+                <div class="item-price">
+                    <div class="item-price__num" id="jeansPrice"></div>
+                    <div class="item-price__rub">руб.</div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-description">
+                    <img class="img" id="imgBelt" src="" alt="belt">
+                    <div class="item-details">
+                    <p class="name">Женский ремень CALZETTI</p>
+                    <div class="select-color">
+                    <label for="beltColor">Цвет: </label>
+                    <select name="color" id="beltColor" onchange="chooseBeltColor()">
+                        <option value="nothing" selected>Не выбрано</option>
+                        <option value="black">Черный</option>
+                        <option value="brown">Коричневый</option>
+                        <option value="blue">Синий</option>
+                    </select>
+                </div>
+                <div class="select-size">
+                    <label for="beltSize">Размер: </label>
+                    <select name="size" id="beltSize">
+                        <option value="nothing" selected>Не выбрано</option>
+                        <option value="90">90 см</option>
+                        <option value="100">100 см</option>
+                        <option value="110">110 см</option>
+                    </select>
+                </div>
+                <div class="select-qty">
+                    <label for="beltQty">Количество: </label>
+                    <select name="quantity" id="beltQty" onchange="chooseBeltQty(), countTotalSum()">
+                        <option value="0" selected>0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                </div>
+                </div>
+                </div>
+                <div class="item-price">
+                    <div class="item-price__num" id="beltPrice"></div>
+                    <div class="item-price__rub">руб.</div>
+                </div>
+            </div>
+        </div>
+        <div class="total">
+            <button class="btn" id="btnDiscount" onclick="discount()">Использовать купон на 20%</button>
+            <div class="sum">
+                <p class="sum__title">Итого:</p>
+                <div class="total-sum" >
+                    <p class="total-sum__num" id="totalSum"></p>
+                    <p class="total-sum__rub">руб.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
